@@ -11,7 +11,7 @@ image_name = 'carbonara.jpg' #carbonara, elephant, guinea, guitar, hotdog, lamp,
 image_path = 'images\\'
 activation_path = 'images\\total_activation\\'
 output_path = 'images\\clust_10\\'
-n_clusters = 10
+n_clusters = [5, 15]
 
 
 im_original = cv2.resize(cv2.imread(image_path+image_name), (224, 224))
@@ -118,7 +118,7 @@ sp.misc.imsave(path, ave.reshape(224, 224))
 i = 1
 for hc in [hc5]:#[hc1, hc2, hc3, hc4, hc5]:
     m = hc.transpose(2,1,0).reshape(50176, -1)
-    cluster_labels = s_t_kmeans(n_clusters, m, 3, image_name)
+    cluster_labels = s_t_kmeans(n_clusters, m)
     imcluster = np.zeros((224,224))
     imcluster = imcluster.reshape((224*224,))
     imcluster = cluster_labels
