@@ -8,9 +8,9 @@ from load_vgg16 import load_vgg16
 from kmeans_self_tuning import s_t_kmeans
 
 image_name = 'carbonara.jpg' #carbonara, elephant, guinea, guitar, hotdog, lamp, martello, me, mouse, pizza, sax, sunglasses
-image_path = 'images\\'
-activation_path = 'images\\total_activation\\'
-output_path = 'images\\clust_10\\'
+image_path = 'images/'
+activation_path = 'images/total_activation/'
+output_path = 'images/clust_10/'
 n_clusters = [5, 15]
 
 

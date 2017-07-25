@@ -11,7 +11,7 @@ def s_t_kmeans(n_clusters, m):
     text_file = open("n_clusters.txt", "w") 
     cluster_labels=np.zeros((224, 224))
     
-    path='images\\clust_'+str(n_clusters)+'\\'
+    path='images/clust_'+str(n_clusters)+'/'
     if not os.path.exists(path):
         os.makedirs(path)
     

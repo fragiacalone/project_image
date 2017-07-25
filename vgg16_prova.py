@@ -5,7 +5,7 @@ from load_vgg16 import load_vgg16
 
 model = load_vgg16()
 
-img_path = 'images\\Immagine.png'
+img_path = 'images/Immagine.png'
 
 img = image.load_img(img_path, target_size=(224, 224))
 

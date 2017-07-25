@@ -15,7 +15,7 @@ name_of_interest = 'sunglass'
 
 n_clusters = 10
 
-img_path = 'images\\predictions_10\\'+img_name+'\\'+mode+'\\'
+img_path = 'images/predictions_10/'+img_name+'/'+mode+'/'
 text_file = open(img_path+"results.txt", "w")
 
 original_features = []
@@ -56,7 +56,7 @@ text_file.close()
 
 
 
-clustered_img = Image.open('images\\clust_'+str(n_clusters)+'\\'+img_name+'_5_'+str(n_clusters)+'.png') 
+clustered_img = Image.open('images/clust_'+str(n_clusters)+'/'+img_name+'_5_'+str(n_clusters)+'.png') 
 clustered_img = clustered_img.convert('RGBA')
 clustered_pix = clustered_img.load()
 
@@ -75,8 +75,8 @@ for color in deltas:
                     else:
                         original_pix[i,j] = tuple(np.asarray(original_pix[i,j]) + (100+200*int(delta/100), 0, 0))
 
-if not os.path.exists(img_path+'predizioni\\'):
-    os.makedirs(img_path+'predizioni\\')
+if not os.path.exists(img_path+'predizioni/'):
+    os.makedirs(img_path+'predizioni/')
     
-image_original.save(img_path+'predizioni\\'+img_name+'_'+name_of_interest+'.png')
+image_original.save(img_path+'predizioni/'+img_name+'_'+name_of_interest+'.png')
     

@@ -52,7 +52,7 @@ def VGG_16(weights_path=None):
 
 def load_vgg16():
     K.set_image_dim_ordering('th')
-    model = VGG_16('weights\\vgg16_weights_th_dim_ordering_th_kernels.h5')
+    model = VGG_16('weights/vgg16_weights_th_dim_ordering_th_kernels.h5')
     sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
     model.compile(optimizer=sgd, loss='categorical_crossentropy')
     print("Compile del modello terminato")

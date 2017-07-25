@@ -1,7 +1,7 @@
 from PIL import Image
 import os, random, numpy as np
 
-path = 'images\\'
+path = 'images/'
 mode = 'transparent' #noise, blur, transparent, pixelate, inverse
 #inc_exc = 'exc'
 
@@ -10,9 +10,9 @@ for file in os.listdir(path):
         # skip directories
         continue
     name = file.split('.')[0]   
-    path_img = 'images\\'+name+'.jpg'
-    path_img_seg = 'images\\clust_10\\'+name+'_5_10.png'
-    path_img_out = 'images\\predictions_10\\'
+    path_img = 'images/'+name+'.jpg'
+    path_img_seg = 'images/clust_10/'+name+'_5_10.png'
+    path_img_out = 'images/predictions_10/'
     
     im = Image.open(path_img)
     pix = im.load()
@@ -22,8 +22,8 @@ for file in os.listdir(path):
     pix_seg = im_seg.load()
     colors = im_seg.getcolors()
     
-    if not os.path.exists(path_img_out+name+'\\'+mode+'\\'):
-        os.makedirs(path_img_out+name+'\\'+mode+'\\')
+    if not os.path.exists(path_img_out+name+'/'+mode+'/'):
+        os.makedirs(path_img_out+name+'/'+mode+'/')
     
     for color in colors:
         color = color[1]
@@ -61,13 +61,13 @@ for file in os.listdir(path):
                         pix_seg[i,j] = pix[k,h]
                     else:    
                         pix_seg[i,j] = (255, 255, 255, 255)    
-        print(path_img_out+name+'\\'+mode+'\\'+name+'_'+str(color)+'_'+mode+'.png')
-        im_seg.save(path_img_out+name+'\\'+mode+'\\'+name+'_'+str(color)+'_'+mode+'.png')
+        print(path_img_out+name+'/'+mode+'/'+name+'_'+str(color)+'_'+mode+'.png')
+        im_seg.save(path_img_out+name+'/'+mode+'/'+name+'_'+str(color)+'_'+mode+'.png')
         im_seg = Image.open(path_img_seg)
         im_seg = im_seg.convert('RGBA')
         pix_seg = im_seg.load()
         
-    im.save(path_img_out+name+'\\'+mode+'\\0'+name+'.png')
+    im.save(path_img_out+name+'/'+mode+'/0'+name+'.png')
         
         
         
