@@ -7,9 +7,21 @@ from sklearn.preprocessing import StandardScaler
 from _overlapped import NULL
 import scipy as sp, numpy as np, os
 
+def kmeans_clustering(n_clusters, m):
+    path='images/clust_'+str(n_clusters)+'/'
+    if not os.path.exists(path):
+        os.makedirs(path)        
+    print("Clustering in corso...")
+    kmeans = cluster.KMeans(n_clusters=n_clusters, max_iter=300, n_jobs=1, precompute_distances=True)
+    labels = kmeans.fit_predict(m)
+    print("Clustering completo")    
+    return  labels   
+
+
 def s_t_kmeans(n_clusters, m):
     text_file = open("n_clusters.txt", "w") 
     cluster_labels=np.zeros((224, 224))
+    
     
     path='images/clust_'+str(n_clusters)+'/'
     if not os.path.exists(path):
