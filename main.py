@@ -5,6 +5,8 @@ from get_features import perturbate_features
 from get_predictions import get_report_absolute, get_report_relative
 from class_list import get_class
 
+
+#ciao
 n_clusters = 10
 perturbations = ['transparent', 'blur']#noise, blur, transparent, pixelate, inverse
 
