@@ -56,6 +56,21 @@ def perturbate_features(image_name, mode, n_clusters):
                             k = i - (i % 4)
                             h = j - (j % 4)
                             pix_seg[i,j] = pix[k,h]
+                        elif mode == 'black':
+                            pix_seg[i,j] = (0, 0, 0, 225) 
+                        elif mode == 'blur15':
+                            blur_index = 15
+                            my_color = np.asarray(pix[i,j])
+                            n = 1
+                            for k in range(-blur_index, blur_index):
+                                for h in range(-blur_index, blur_index):
+                                    try:
+                                        my_color += np.asarray(pix[i+k,j+h])
+                                    except:
+                                        my_color += np.asarray(pix[i,j])
+                                    n += 1
+                            my_color = my_color/n
+                            pix_seg[i,j] = tuple(my_color.astype(int))
                         else:    
                             pix_seg[i,j] = (255, 255, 255, 255)    
             print(path_img_out+image_name+'/'+image_name+'/'+image_name+'_'+str(color)+'_'+mode+'.png')
@@ -69,7 +84,48 @@ def perturbate_features(image_name, mode, n_clusters):
             
         im.save(seg_path+'/0riginal_'+image_name+'.png')
         
-        
-        
-        
+def get_features(image_name, n_clusters):
+    image_name = image_name.split('.')[0]
+    path_img = 'images/input_images/'+image_name+'.jpg'
+    path_img_seg = 'images/clust_'+str(n_clusters)+'/'+image_name+'_'+str(n_clusters)+'.png'
+    path_img_out = 'images/predictions_'+str(n_clusters)+'/'
+    seg_path = path_img_out+image_name+'/features/'
+       
+    im = Image.open(path_img)
+    pix = im.load()
     
+    im_seg = Image.open(path_img_seg)
+    im_seg = im_seg.convert('RGBA')
+    pix_seg = im_seg.load()
+    colors = im_seg.getcolors()
+    
+    if not os.path.exists(seg_path):
+        os.makedirs(seg_path)
+    
+    if os.path.isfile(seg_path+'/'+image_name+'_(0, 0, 0, 255).png'):
+        print("Features ok")       
+    else:  
+        for color in colors:
+            color = color[1]
+            for i in range(0,224):
+                for j in range(0,224):
+                    if pix_seg[i,j] == color: #inc/exc
+                        pix_seg[i,j] = pix[i,j]   
+                    elif i%2 == 0 and j%2 == 0:
+                        pix_seg[i,j] = pix[i,j]   
+                    else:
+                        pix_seg[i,j] = (255,255,255,0)
+                        
+            print(path_img_out+image_name+'/'+image_name+'/features/'+image_name+'_'+str(color)+'.png')
+            
+            if not os.path.exists(seg_path):
+                os.makedirs(seg_path)
+            im_seg.save(seg_path+image_name+'_'+str(color)+'.png')
+            im_seg = Image.open(path_img_seg)
+            im_seg = im_seg.convert('RGBA')
+            pix_seg = im_seg.load()
+            
+        im.save(seg_path+'/0riginal_'+image_name+'.png')
+        
+        
+      

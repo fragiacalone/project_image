@@ -1,0 +1,33 @@
+0riginal_table lamp.png
+Predizione: [[('n04380533', 'table_lamp', 0.58583075), ('n03637318', 'lampshade', 0.3843742), ('n03443371', 'goblet', 0.009991142)]]
+
+table lamp_(0, 0, 0, 255)_blur.png
+Predizione: [[('n04380533', 'table_lamp', 0.64185387), ('n03637318', 'lampshade', 0.32910714), ('n03443371', 'goblet', 0.0095218671)]]
+
+table lamp_(113, 113, 113, 255)_blur.png
+Predizione: [[('n04380533', 'table_lamp', 0.57045543), ('n03637318', 'lampshade', 0.40481216), ('n03443371', 'goblet', 0.0095676538)]]
+
+table lamp_(142, 142, 142, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.48784614), ('n04380533', 'table_lamp', 0.44422922), ('n03443371', 'goblet', 0.019524213)]]
+
+table lamp_(170, 170, 170, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.66435105), ('n04380533', 'table_lamp', 0.28013429), ('n04286575', 'spotlight', 0.012089856)]]
+
+table lamp_(198, 198, 198, 255)_blur.png
+Predizione: [[('n04380533', 'table_lamp', 0.74272615), ('n03637318', 'lampshade', 0.22319046), ('n04286575', 'spotlight', 0.010758733)]]
+
+table lamp_(227, 227, 227, 255)_blur.png
+Predizione: [[('n04380533', 'table_lamp', 0.56123471), ('n03637318', 'lampshade', 0.40274227), ('n03443371', 'goblet', 0.012237118)]]
+
+table lamp_(255, 255, 255, 255)_blur.png
+Predizione: [[('n04380533', 'table_lamp', 0.78213817), ('n03637318', 'lampshade', 0.1918356), ('n04286575', 'spotlight', 0.013611779)]]
+
+table lamp_(28, 28, 28, 255)_blur.png
+Predizione: [[('n04380533', 'table_lamp', 0.51517922), ('n03637318', 'lampshade', 0.45342299), ('n04286575', 'spotlight', 0.010119902)]]
+
+table lamp_(57, 57, 57, 255)_blur.png
+Predizione: [[('n04380533', 'table_lamp', 0.58214295), ('n03637318', 'lampshade', 0.38253528), ('n03443371', 'goblet', 0.015490934)]]
+
+table lamp_(85, 85, 85, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.48703828), ('n04380533', 'table_lamp', 0.4200651), ('n03443371', 'goblet', 0.039249577)]]
+

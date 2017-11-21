@@ -9,7 +9,7 @@ from numpy.distutils.lib2def import output_def
 def extract_features(model, image_name, n_clusters):
     image_path = 'images/input_images/'
     activation_path = 'images/total_activation/'
-    output_path = 'images/clust_10/'
+    output_path = 'images/clust_' + str(n_clusters) + '/'
     
     out_file_name = output_path + image_name.split('.')[0] + '_' + str(n_clusters) + '.png'
     
@@ -24,11 +24,10 @@ def extract_features(model, image_name, n_clusters):
     
     layers_extract = [20, 29]
     hc = extract_hypercolumn(model, layers_extract, im_converted)
-    ave = np.average(hc.transpose(2, 1, 0), axis=2)
-    path = activation_path + image_name.split('.')[0] + '_20_29.png'
-    print("Activation img: "+path) 
-    sp.misc.imsave(path, ave.reshape(224, 224))
-    
+    #ave = np.average(hc.transpose(2, 1, 0), axis=2)
+    #path = activation_path + image_name.split('.')[0] + '_'+str(layers_extract[0])+'_'+str(layers_extract[1])+'.png'
+    #print("Activation img: "+path) 
+    #sp.misc.imsave(path, ave.reshape(224, 224))
     m = hc.transpose(2,1,0).reshape(50176, -1)
     cluster_labels = kmeans_clustering(n_clusters, m)
     imcluster = np.zeros((224,224))

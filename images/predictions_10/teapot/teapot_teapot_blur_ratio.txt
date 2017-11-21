@@ -1,0 +1,33 @@
+0riginal_teapot.png
+Predizione: [[('n03637318', 'lampshade', 0.29841), ('n04380533', 'table_lamp', 0.11493352), ('n04398044', 'teapot', 0.0290947)]]
+
+teapot_(0, 0, 0, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.18420531), ('n04398044', 'teapot', 0.070818298), ('n01943899', 'conch', 0.06165852)]]
+
+teapot_(113, 113, 113, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.44590613), ('n04380533', 'table_lamp', 0.13502498), ('n04553703', 'washbasin', 0.022992484)]]
+
+teapot_(142, 142, 142, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.40156066), ('n04380533', 'table_lamp', 0.11406227), ('n04398044', 'teapot', 0.035014607)]]
+
+teapot_(170, 170, 170, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.26702997), ('n04380533', 'table_lamp', 0.09958455), ('n04553703', 'washbasin', 0.054284971)]]
+
+teapot_(198, 198, 198, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.2965757), ('n04380533', 'table_lamp', 0.1194075), ('n03903868', 'pedestal', 0.029947013)]]
+
+teapot_(227, 227, 227, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.52043647), ('n04380533', 'table_lamp', 0.13402547), ('n03903868', 'pedestal', 0.015899003)]]
+
+teapot_(255, 255, 255, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.4597545), ('n04380533', 'table_lamp', 0.13838565), ('n03903868', 'pedestal', 0.041281257)]]
+
+teapot_(28, 28, 28, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.31867453), ('n04380533', 'table_lamp', 0.090341754), ('n03903868', 'pedestal', 0.040294934)]]
+
+teapot_(57, 57, 57, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.37317938), ('n04380533', 'table_lamp', 0.1365353), ('n03903868', 'pedestal', 0.028671902)]]
+
+teapot_(85, 85, 85, 255)_blur.png
+Predizione: [[('n03637318', 'lampshade', 0.1598556), ('n04398044', 'teapot', 0.057976171), ('n03935335', 'piggy_bank', 0.052678246)]]
+
